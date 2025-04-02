@@ -18,6 +18,8 @@ Simulate the phase transition process of crystals, which is the most original ap
 python IsingModel.py
 ```
 
+![](https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/hello_world.gif)
+
 ### Max-Cut Problem
 
 Map the Max-Cut problem to the Ising model and then solve it using simulated annealing. This process is typically demonstrated by generating images, as the coloring of Max-Cut can directly correspond to different regions of a binary image.
@@ -28,11 +30,15 @@ Map the Max-Cut problem to the Ising model and then solve it using simulated ann
 python IsingModel.py -w 28 -h 28 -tmax 20 -tmin 1 -jj j-coupling/number_1.txt
 ```
 
+![](https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/gen_num_1.gif)
+
 #### Generate word SEMI
 
 ```bat
 python IsingModel.py -w 200 -h 100 -tmax 20 -tmin 1 -jj j-coupling/word_SEMI.txt -e 50_000_000
 ```
+
+![](https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/gen_word_SEMI.gif)
 
 ### Image Denoising
 
@@ -44,13 +50,64 @@ Map the Total Variation (TV) denoising algorithm to the Ising model. Although TV
 python IsingModel.py -w 64 -h 64 -a exp -tmax 20 -tmin 1 -js c -jj tv-denoise/ABC/j_noise_ABC.txt -hl 8.0 -hh tv-denoise/ABC/h_noise_ABC.txt
 ```
 
+<table><tr>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/ABC/ABC.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/ABC/noise_ABC.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/tv_word_ABC.gif" height=64/></td>
+</tr></table>
+
 #### Denoise numbers
 
 ```bat
 python IsingModel.py -w 64 -h 64 -a exp -tmax 20 -tmin 1 -js c -jj tv-denoise/numbers/system/j_noise_0.txt -hl 8.0 -hh tv-denoise/numbers/system/h_noise_0.txt
 ```
 
+<table><tr>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/numbers/rawpng/0.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/numbers/noise/noise_0.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_0.gif" height=64/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/numbers/rawpng/1.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/numbers/noise/noise_1.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_1.gif" height=64/></td>
+</tr><tr>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/numbers/rawpng/2.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/numbers/noise/noise_2.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_2.gif" height=64/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/numbers/rawpng/3.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/numbers/noise/noise_3.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_3.gif" height=64/></td>
+</tr><tr>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/numbers/rawpng/4.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/numbers/noise/noise_4.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_4.gif" height=64/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/numbers/rawpng/5.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/numbers/noise/noise_5.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_5.gif" height=64/></td>
+</tr><tr>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/numbers/rawpng/6.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/numbers/noise/noise_6.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_6.gif" height=64/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/numbers/rawpng/7.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/numbers/noise/noise_7.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_7.gif" height=64/></td>
+</tr><tr>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/numbers/rawpng/8.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/numbers/noise/noise_8.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_8.gif" height=64/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/numbers/rawpng/9.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/numbers/noise/noise_9.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_9.gif" height=64/></td>
+</tr></table>
+
 Replace `j_noise_0` and `h_noise_0` for different numbers.
+
+### Denoise maze128
+
+<table><tr>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/maze128/maze128.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/maze128/noise_maze128.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/tv_maze128.gif" height=128/></td>
+</tr></table>
 
 ## Argument Table
 
@@ -87,6 +144,8 @@ Plot different annealing curves.
 cd annealing
 python DrawCurves.py
 ```
+
+![](https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/annealing/curves.png)
 
 ### Convert.py
 
