@@ -18,7 +18,7 @@ Simulate the phase transition process of crystals, which is the most original ap
 python IsingModel.py
 ```
 
-![](https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/hello_world.gif)
+<img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/hello_world.gif" height=256/>
 
 ### Max-Cut Problem
 
@@ -30,7 +30,7 @@ Map the Max-Cut problem to the Ising model and then solve it using simulated ann
 python IsingModel.py -w 28 -h 28 -tmax 20 -tmin 1 -jj j-coupling/number_1.txt
 ```
 
-![](https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/gen_num_1.gif)
+<img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/gen_num_1.gif" height=256/>
 
 #### Generate word SEMI
 
@@ -38,7 +38,7 @@ python IsingModel.py -w 28 -h 28 -tmax 20 -tmin 1 -jj j-coupling/number_1.txt
 python IsingModel.py -w 200 -h 100 -tmax 20 -tmin 1 -jj j-coupling/word_SEMI.txt -e 50_000_000
 ```
 
-![](https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/gen_word_SEMI.gif)
+<img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/gen_word_SEMI.gif" height=256/>
 
 ### Image Denoising
 
@@ -145,7 +145,7 @@ cd annealing
 python DrawCurves.py
 ```
 
-![](https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/annealing/curves.png)
+<img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/annealing/curves.png" height=256/>
 
 ### Convert.py
 
