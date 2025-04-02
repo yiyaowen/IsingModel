@@ -1,0 +1,7 @@
+click
+ffmpeg
+matplotlib
+numpy
+pillow
+termcolor
+tqdm
