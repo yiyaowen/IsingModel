@@ -273,7 +273,7 @@ def run(
     n # subprocess No
     ):
     """
-    # Run the Metropolis simulation and save the output frames (*.gif/mp4).
+    Run the Metropolis simulation and save the output frames (*.gif/mp4).
     """
     plt.ion()
 
