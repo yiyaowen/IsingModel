@@ -1,7 +1,7 @@
 # 2D Ising Model Simulation with Metropolis Algorithm
 # Copyleft (c) 2025 yiyaowen (wenyiyao23@semi.ac.cn)
 #
-# Code Repo: https://github.com/yiyaowen/IsingChip
+# Code Repo: https://github.com/yiyaowen/IsingModel
 # MIT License: https://opensource.org/licenses/MIT
 #
 # Preferably run this script with Python 3.10 or later
@@ -51,6 +51,9 @@ class IsingLattice:
         init_state, j_coupling, h_lambda, h_coupling,
         epochs
         ):
+        if width <= 1 or height <= 1:
+            raise ValueError("Invalid: width or height <= 1")
+
         # only include spins
         self.rows = height
         self.cols = width
@@ -65,9 +68,11 @@ class IsingLattice:
         self.full_count = self.full_rows * self.full_cols
 
         self.annealing = annealing
-        self.Tmax = anneal_temp1
-        self.Tmin = anneal_temp2
-        self.Tspan = self.Tmax - self.Tmin
+        self.tmax = anneal_temp1
+        self.tmin = anneal_temp2
+        if self.tmax < self.tmin:
+            raise ValueError("Invalid: tmax < tmin")
+        self.tspan = self.tmax - self.tmin
 
         self.build_j_system(init_state, j_coupling)
         self.build_h_system(h_lambda, h_coupling)
@@ -80,7 +85,7 @@ class IsingLattice:
 
     def build_j_system(self, init_state, j_coupling):
         if j_coupling:
-            self.j_system = np.loadtxt(j_coupling)
+            self.j_system = np.loadtxt(j_coupling, dtype=int)
             if self.j_system.shape != self.full_size:
                 raise ValueError("Invalid J-coupling Shape")
         else: # init with random spins and J-couplings
@@ -114,11 +119,11 @@ class IsingLattice:
 
     def build_h_system(self, h_lambda, h_coupling):
         if h_coupling:
-            self.h_system = h_lambda * np.loadtxt(h_coupling)
+            self.h_system = h_lambda * np.loadtxt(h_coupling, dtype=int)
             if self.h_system.shape != self.size:
                 raise ValueError("Invalid H-coupling Shape")
         else: # init with zero H-couplings
-            self.h_system = np.zeros(self.size)
+            self.h_system = np.zeros(self.size, dtype=int)
 
     def T(self, epoch):
         """
@@ -129,19 +134,19 @@ class IsingLattice:
         x = epoch / self.epochs
         match self.annealing:
             case "lin":
-                return self.Tmin + self.Tspan * (1 - x)
+                return self.tmin + self.tspan * (1 - x)
             case "exp":
-                return self.Tmin + self.Tspan * np.exp(-5 * x)
+                return self.tmin + self.tspan * np.exp(-5 * x)
             case "exp2":
-                return self.Tmin + self.Tspan * np.exp(-10 * x)
+                return self.tmin + self.tspan * np.exp(-10 * x)
             case "cos":
-                return self.Tmin + self.Tspan * np.cos(np.pi/2 * x**2)
+                return self.tmin + self.tspan * np.cos(np.pi/2 * x**2)
             case "cos2":
-                return self.Tmin + self.Tspan * np.cos(np.pi/2 * x**4)
+                return self.tmin + self.tspan * np.cos(np.pi/2 * x**4)
             case "plateau":
-                return self.Tmin + self.Tspan * (0.5 - (1.6*x - 0.8)**3)
+                return self.tmin + self.tspan * (0.5 - (1.6*x - 0.8)**3)
             case "sigmoid":
-                return self.Tmin + self.Tspan * (1 - 1 / (1 + np.exp(5 - 10 * x)))
+                return self.tmin + self.tspan * (1 - 1 / (1 + np.exp(5 - 10 * x)))
             case _:
                 raise ValueError("Invalid Annealing Method")
 
@@ -153,15 +158,15 @@ class IsingLattice:
         """
         _r = r
         if r < 0:
-            _r = 0
+            _r = 1
         elif r >= self.rows:
-            _r = self.rows - 1
+            _r = self.rows - 2
 
         _c = c
         if c < 0:
-            _c = 0
+            _c = 1
         elif c >= self.cols:
-            _c = self.cols - 1
+            _c = self.cols - 2
 
         return 2*_r, 2*_c
 
@@ -262,28 +267,43 @@ class IsingLattice:
         return U_2 - U**2
 
 
-def run(lattice, sample_count, epochs, output_video, frame_rate, duration, n):
+def run(
+    lattice, sample_count, epochs,
+    output_path, frame_scale, frame_rate, duration,
+    n # subprocess No
+    ):
     """
-    Run the Metropolis simulation and save the output video (*.mp4).
+    # Run the Metropolis simulation and save the output frames (*.gif/mp4).
     """
     plt.ion()
-    fig = plt.figure()
 
-    FFMpegWriter = anim.writers["ffmpeg"]
-    writer = FFMpegWriter(fps=frame_rate)
+    scale = frame_scale / 100
+    figsize = (lattice.cols*scale, lattice.rows*scale)
+    fig = plt.figure(num=1, figsize=figsize, dpi=100)
+
+    writer = None
+    match path.splitext(output_path)[1]:
+        case ".gif":
+            writer = anim.PillowWriter(fps=frame_rate)
+        case ".mp4":
+            FFMpegWriter = anim.writers["ffmpeg"]
+            writer = FFMpegWriter(fps=frame_rate)
+        case _:
+            raise ValueError("Invalid Output File Format")
 
     frame_count = frame_rate * duration
-    record_point = epochs // frame_count
+    record_point = max(epochs // frame_count, 1)
 
-    with writer.saving(fig, output_video, dpi=192):
+    with writer.saving(fig, output_path, dpi=100):
         for i in tqdm(range(epochs), desc=f"#{n:3}", position=n, leave=False):
 
             #########################################
             # Randomly select a site on the lattice #
             #########################################
 
-            cds = [np.random.randint(0, lattice.size, 2)
-                   for i in range(sample_count)]
+            cds = [np.random.randint(
+                (0, 0), lattice.size)
+                for _ in range(sample_count)]
 
             ##########################################
             # Calculate the energy of a flipped spin #
@@ -312,9 +332,11 @@ def run(lattice, sample_count, epochs, output_video, frame_rate, duration, n):
             if i % (record_point) == 0:
                 img = plt.imshow(
                     lattice.spins,
-                    cmap="tab20", # blue color map
+                    cmap="gray", # grayscale
                     interpolation="nearest" # pixel style
                     )
+                plt.axis("off")
+                plt.subplots_adjust(0, 0, 1, 1)
                 writer.grab_frame() # encode the frame
                 img.remove() # prepare for next frame
 
@@ -326,7 +348,7 @@ def fun(
     annealing, anneal_temp1, anneal_temp2,
     init_state, j_coupling, h_lambda, h_coupling,
     sample_count, epochs,
-    output_video, frame_rate, duration,
+    output_path, frame_scale, frame_rate, duration,
     n, # subprocess No
     ):
     lattice = IsingLattice(
@@ -337,11 +359,17 @@ def fun(
         )
     # Test the lattice build
     # np.set_printoptions(threshold=np.inf)
-    # print(lattice.system)
     # print(lattice.spins)
-    # exit()
-    output_video = f"{path.splitext(output_video)[0]}_{n}.mp4"
-    run(lattice, sample_count, epochs, output_video, frame_rate, duration, n)
+    # print(lattice.system)
+
+	# Output GIF file by default
+    output_info = path.splitext(output_path)
+    if output_info[1] == "":
+        output_path = f"{output_info[0]}_{n}.gif"
+    else: # append the subprocess No to the output file name
+        output_path = f"{output_info[0]}_{n}{output_info[1]}"
+
+    run(lattice, sample_count, epochs, output_path, frame_scale, frame_rate, duration, n)
 
     # print(f"{'Magnetization [%]:':.<25}{lattice.magnetization:.2f}")
     # print(f"{'Heat Capacity [AU]:':.<25}{lattice.heat_capacity:.2f}")
@@ -398,7 +426,7 @@ def fun(
     )
 @click.option(
     "--h-lambda", "-hl",
-    default=1.0,
+    default=1,
     help="Set custom H-lambda for H-coupling"
     )
 @click.option(
@@ -413,28 +441,33 @@ def fun(
     )
 @click.option(
     "--epochs", "-e",
-    default=1_000_000, type=int,
+    default=1_000_000,
     help="Number of epochs to run the simulation"
     # An experience value is 1_000_000 for a 100x100 lattice, or more for a larger lattice.
     )
 @click.option(
-    "--output-video", "-o",
-    default="result.mp4",
-    help="Output video file name (*.mp4)"
+    "--output-path", "-o",
+    default="result.gif",
+    help="Output file name (*.gif/mp4)"
+    )
+@click.option(
+    "--frame-scale", "-s",
+    default=1,
+    help="Frame scale of the output file"
     )
 @click.option(
     "--frame-rate", "-f",
-    default=5, type=int,
-    help="Frame rate of the output video"
+    default=5,
+    help="Frame rate of the output file"
     )
 @click.option(
     "--duration", "-d",
-    default=3, type=int,
-    help="Duration of the output video in seconds"
+    default=3,
+    help="Duration of the frames in seconds"
     )
 @click.option(
     "--parallel", "-p",
-    default=1, type=int,
+    default=1,
     help="Parallel count of the simulation"
     )
 def main(
@@ -442,7 +475,7 @@ def main(
     annealing, anneal_temp1, anneal_temp2,
     init_state, j_coupling, h_lambda, h_coupling,
     sample_count, epochs,
-    output_video, frame_rate, duration,
+    output_path, frame_scale, frame_rate, duration,
     parallel
     ):
     t1 = time()
@@ -456,7 +489,7 @@ def main(
         annealing, anneal_temp1, anneal_temp2,
         init_state, j_coupling, h_lambda, h_coupling,
         sample_count, epochs,
-        output_video, frame_rate, duration
+        output_path, frame_scale, frame_rate, duration
         )
     L = list(range(parallel))
 

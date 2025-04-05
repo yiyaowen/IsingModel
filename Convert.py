@@ -7,10 +7,6 @@ import click
     "source",
     type=click.Path(exists=True)
     )
-@click.argument(
-    "target",
-    type=click.Path()
-    )
 @click.option(
     "--problem", "-p",
     default=None,
@@ -24,13 +20,13 @@ import click
     help="Graph type (topology) of the spins"
     )
 def main(
-    source, target, problem, graph_type
+    source, problem, graph_type
     ):
     match problem:
         case "Denoise":
-            Denoise.convert(source, target)
+            Denoise.convert(source)
         case "Generate":
-            Generate.convert(source, target, graph_type)
+            Generate.convert(source, graph_type)
         case _:
             raise ValueError("Invalid Problem")
 

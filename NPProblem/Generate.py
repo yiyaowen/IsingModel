@@ -1,13 +1,17 @@
+from os import path
 from PIL import Image
 import numpy as np
 
 from NPProblem.Coordinate import Coordinate
 
 
-def convert(image_path, output_txt, graph_type):
+def convert(image_path, graph_type):
     """
     Convert a monochrome image to a Spin/J-coupling system.
     """
+    output_path = path.abspath(image_path)
+    output_name = path.splitext(output_path)[0]
+
     img = Image.open(image_path)
     img = img.convert("1")
 
@@ -58,4 +62,4 @@ def convert(image_path, output_txt, graph_type):
                     case _:
                         raise ValueError("Invalid Graph Type")
 
-    np.savetxt(output_txt, system, fmt="%+d")
+    np.savetxt(f"{output_name}.txt", system, fmt="%+d")

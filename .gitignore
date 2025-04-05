@@ -1,4 +1,4 @@
-*.mp4
+result_*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

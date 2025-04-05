@@ -27,8 +27,8 @@ if __name__ == "__main__":
         input_image = Image.open(image_path).convert("L")
 
         # Add salt and pepper noise
-        salt_probability = 0.05 # Adjust as needed
-        pepper_probability = 0.05 # Adjust as needed
+        salt_probability = 0.1 # Adjust as needed
+        pepper_probability = 0.1 # Adjust as needed
 
         noisy_image = add_salt_and_pepper_noise(
             input_image, salt_probability, pepper_probability)
