@@ -78,38 +78,38 @@ python IsingModel.py -w 64 -h 64 -a exp -tmax 20 -tmin 1 -js c -jj tv-denoise/nu
 <table><tr>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/tv-denoise/numbers/rawpng/0.png"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/tv-denoise/numbers/noise/noise_0.png"/></td>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/examples/denoise_numbers/tv_num_0.gif" height=64/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/examples/denoise_numbers/tv_num_0.gif"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/tv-denoise/numbers/rawpng/1.png"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/tv-denoise/numbers/noise/noise_1.png"/></td>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/examples/denoise_numbers/tv_num_1.gif" height=64/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/examples/denoise_numbers/tv_num_1.gif"/></td>
 </tr><tr>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/tv-denoise/numbers/rawpng/2.png"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/tv-denoise/numbers/noise/noise_2.png"/></td>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/examples/denoise_numbers/tv_num_2.gif" height=64/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/examples/denoise_numbers/tv_num_2.gif"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/tv-denoise/numbers/rawpng/3.png"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/tv-denoise/numbers/noise/noise_3.png"/></td>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/examples/denoise_numbers/tv_num_3.gif" height=64/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/examples/denoise_numbers/tv_num_3.gif"/></td>
 </tr><tr>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/tv-denoise/numbers/rawpng/4.png"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/tv-denoise/numbers/noise/noise_4.png"/></td>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/examples/denoise_numbers/tv_num_4.gif" height=64/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/examples/denoise_numbers/tv_num_4.gif"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/tv-denoise/numbers/rawpng/5.png"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/tv-denoise/numbers/noise/noise_5.png"/></td>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/examples/denoise_numbers/tv_num_5.gif" height=64/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/examples/denoise_numbers/tv_num_5.gif"/></td>
 </tr><tr>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/tv-denoise/numbers/rawpng/6.png"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/tv-denoise/numbers/noise/noise_6.png"/></td>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/examples/denoise_numbers/tv_num_6.gif" height=64/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/examples/denoise_numbers/tv_num_6.gif"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/tv-denoise/numbers/rawpng/7.png"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/tv-denoise/numbers/noise/noise_7.png"/></td>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/examples/denoise_numbers/tv_num_7.gif" height=64/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/examples/denoise_numbers/tv_num_7.gif"/></td>
 </tr><tr>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/tv-denoise/numbers/rawpng/8.png"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/tv-denoise/numbers/noise/noise_8.png"/></td>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/examples/denoise_numbers/tv_num_8.gif" height=64/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/examples/denoise_numbers/tv_num_8.gif"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/tv-denoise/numbers/rawpng/9.png"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/tv-denoise/numbers/noise/noise_9.png"/></td>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/examples/denoise_numbers/tv_num_9.gif" height=64/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/BinarySpin/examples/denoise_numbers/tv_num_9.gif"/></td>
 </tr></table>
 
 Replace `j_noise_0` and `h_noise_0` for different numbers.
