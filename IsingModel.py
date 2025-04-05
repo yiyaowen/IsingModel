@@ -269,7 +269,7 @@ class IsingLattice:
 
 def run(
     lattice, sample_count, epochs,
-    output_path, frame_scale, frame_rate, duration,
+    output_path, frame_scale, frame_rate, anim_duration,
     n # subprocess No
     ):
     """
@@ -291,7 +291,7 @@ def run(
         case _:
             raise ValueError("Invalid Output File Format")
 
-    frame_count = frame_rate * duration
+    frame_count = frame_rate * anim_duration
     record_point = max(epochs // frame_count, 1)
 
     with writer.saving(fig, output_path, dpi=100):
@@ -348,7 +348,7 @@ def fun(
     annealing, anneal_temp1, anneal_temp2,
     init_state, j_coupling, h_lambda, h_coupling,
     sample_count, epochs,
-    output_path, frame_scale, frame_rate, duration,
+    output_path, frame_scale, frame_rate, anim_duration,
     n, # subprocess No
     ):
     lattice = IsingLattice(
@@ -369,7 +369,7 @@ def fun(
     else: # append the subprocess No to the output file name
         output_path = f"{output_info[0]}_{n}{output_info[1]}"
 
-    run(lattice, sample_count, epochs, output_path, frame_scale, frame_rate, duration, n)
+    run(lattice, sample_count, epochs, output_path, frame_scale, frame_rate, anim_duration, n)
 
     # print(f"{'Magnetization [%]:':.<25}{lattice.magnetization:.2f}")
     # print(f"{'Heat Capacity [AU]:':.<25}{lattice.heat_capacity:.2f}")
@@ -461,12 +461,12 @@ def fun(
     help="Frame rate of the output file"
     )
 @click.option(
-    "--duration", "-d",
+    "--anim-duration", "-d",
     default=3,
-    help="Duration of the frames in seconds"
+    help="Duration of the animation in seconds"
     )
 @click.option(
-    "--parallel", "-p",
+    "--parallel-count", "-p",
     default=1,
     help="Parallel count of the simulation"
     )
@@ -475,8 +475,8 @@ def main(
     annealing, anneal_temp1, anneal_temp2,
     init_state, j_coupling, h_lambda, h_coupling,
     sample_count, epochs,
-    output_path, frame_scale, frame_rate, duration,
-    parallel
+    output_path, frame_scale, frame_rate, anim_duration,
+    parallel_count
     ):
     t1 = time()
 
@@ -489,9 +489,9 @@ def main(
         annealing, anneal_temp1, anneal_temp2,
         init_state, j_coupling, h_lambda, h_coupling,
         sample_count, epochs,
-        output_path, frame_scale, frame_rate, duration
+        output_path, frame_scale, frame_rate, anim_duration
         )
-    L = list(range(parallel))
+    L = list(range(parallel_count))
 
     with ctx.Pool(initializer=tqdm.set_lock, initargs=(lock,)) as p:
         p.map(job, L)
@@ -500,7 +500,7 @@ def main(
     elapsed = round(t2 - t1)
     seconds = elapsed % 60
     minutes = elapsed // 60
-    cprint(f"\n{parallel} finished with {minutes} minutes {seconds} seconds\n", "green")
+    cprint(f"\n{parallel_count} finished with {minutes} minutes {seconds} seconds\n", "green")
 
 if __name__ == "__main__":
     main()
