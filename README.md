@@ -174,30 +174,40 @@ python IsingModel.py -w 256 -h 256 -a plateau -tmax 20 -tmin 1 -smin 0 -smax 255
 <th></th>
 <th>原图</th>
 <th>泊松噪声</th>
-<th><font color="green">伊辛模型</font></th>
-<th>双边滤波</th>
 <th>高斯滤波</th>
 </tr><tr>
 <th>PSNR</th>
 <td>NA</td>
 <td>26.96</td>
-<td><font color="green">29.86</font></td>
-<td>28.34</td>
 <td>24.42</td>
 </tr><tr>
 <th>SSIM</th>
 <td>1.0</td>
 <td>0.6587</td>
-<td><font color="green">0.8369</font></td>
-<td>0.8343</td>
 <td>0.7306</td>
 </tr><tr>
 <th>结果</th>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/lenna.png"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/poisson/poisson_lenna.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/poisson/gaussian_poisson_lenna.png"/></td>
+</tr></table>
+
+<table><tr>
+<th></th>
+<th>伊辛模型</th>
+<th>双边滤波</th>
+</tr><tr>
+<th>PSNR</th>
+<td>29.86</td>
+<td>28.34</td>
+</tr><tr>
+<th>SSIM</th>
+<td>0.8369</td>
+<td>0.8343</td>
+</tr><tr>
+<th>结果</th>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/poisson/ising_spins_poisson_lenna.png"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/poisson/bilateral_poisson_lenna.png"/></td>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/poisson/gaussian_poisson_lenna.png"/></td>
 </tr></table>
 
 注：双边滤波参数 d=2, sigmaColor=100；高斯滤波参数 size=2
@@ -222,31 +232,43 @@ python IsingModel.py -w 256 -h 256 -a plateau -tmax 20 -tmin 1 -smin 0 -smax 255
 <th></th>
 <th>原图</th>
 <th>椒盐噪声</th>
-<th><font color="green">伊辛模型</font></th>
-<th>中值滤波-3</th>
 <th>中值滤波-5</th>
 </tr><tr>
 <th>PSNR</th>
 <td>NA</td>
 <td>14.04</td>
-<td><font color="green">29.64</font></td>
-<td>28.85</td>
 <td>26.48</td>
 </tr><tr>
 <th>SSIM</th>
 <td>1.0</td>
 <td>0.2012</td>
-<td><font color="green">0.9257</font></td>
-<td>0.9090</td>
 <td>0.8276</td>
 </tr><tr>
 <th>结果</th>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/lenna.png"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/salt_pepper/salt_pepper_lenna.png"/></td>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/salt_pepper/ising_spins_salt_pepper_lenna.png"/></td>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/salt_pepper/median3_salt_pepper_lenna.png"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/salt_pepper/median5_salt_pepper_lenna.png"/></td>
 </tr></table>
+
+<table><tr>
+<th></th>
+<th>伊辛模型</th>
+<th>中值滤波-3</th>
+</tr><tr>
+<th>PSNR</th>
+<td>29.64</td>
+<td>28.85</td>
+</tr><tr>
+<th>SSIM</th>
+<td>0.9257</td>
+<td>0.9090</td>
+</tr><tr>
+<th>结果</th>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/salt_pepper/ising_spins_salt_pepper_lenna.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/salt_pepper/median3_salt_pepper_lenna.png"/></td>
+</tr></table>
+
+注意到伊辛模型和中值滤波-3的结果中仍然存在一定的黑白色块。我们故意应用了较大的椒盐噪声（概率=0.07）来展示这种情况，此时中值滤波-5能够将这些色块全部处理干净，但代价是图像变得更加模糊了，这是为什么它的 PSNR 和 SSIM 较低的原因。
 
 ## 参数列表
 
