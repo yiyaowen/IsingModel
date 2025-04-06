@@ -166,8 +166,8 @@ python IsingModel.py -w 256 -h 256 -a plateau -tmax 20 -tmin 1 -smin 0 -smax 255
 <th>退火过程</th>
 <th>能量变化</th>
 </tr><tr>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/poisson/ising_anim_poisson_lenna.gif"/></td>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/poisson/ising_energy_poisson_lenna.png"/></td>
+<td width=50%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/poisson/ising_anim_poisson_lenna.gif"/></td>
+<td width=50%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/poisson/ising_energy_poisson_lenna.png"/></td>
 </tr></table>
 
 <table><tr>
@@ -214,8 +214,8 @@ python IsingModel.py -w 256 -h 256 -a plateau -tmax 20 -tmin 1 -smin 0 -smax 255
 <th>退火过程</th>
 <th>能量变化</th>
 </tr><tr>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/salt_pepper/ising_anim_salt_pepper_lenna.gif"/></td>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/salt_pepper/ising_energy_salt_pepper_lenna.png"/></td>
+<td width=50%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/salt_pepper/ising_anim_salt_pepper_lenna.gif"/></td>
+<td width=50%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/salt_pepper/ising_energy_salt_pepper_lenna.png"/></td>
 </tr></table>
 
 <table><tr>
