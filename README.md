@@ -268,7 +268,7 @@ python IsingModel.py -w 256 -h 256 -a plateau -tmax 20 -tmin 1 -smin 0 -smax 255
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/salt_pepper/median3_salt_pepper_lenna.png"/></td>
 </tr></table>
 
-注意到伊辛模型和中值滤波-3的结果中仍然存在一定的黑白色块。我们故意应用了较大的椒盐噪声（概率=0.07）来展示这种情况，此时中值滤波-5能够将这些色块全部处理干净，但代价是图像变得更加模糊了，这是为什么它的 PSNR 和 SSIM 较低的原因。
+注意到伊辛模型和中值滤波-3的结果中仍然存在一定的黑白色块。我们故意应用了较大的椒盐噪声（概率=0.07）来展示这种情况，此时中值滤波-5能够将这些色块全部处理干净，但代价是图像变得更加模糊了，这是为什么它的 PSNR 和 SSIM 较低的原因。此外伊辛模型相对于中值滤波-3的另一个优势在于，模拟退火的求解过程中存在温度控制的翻转概率等随机变量，因此某些测试中伊辛模型也能够将黑白色块全部去除，从而得到更好的结果，这意味着伊辛模型在普遍意义上表现更好。
 
 ## 参数列表
 
