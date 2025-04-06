@@ -172,22 +172,18 @@ python IsingModel.py -w 256 -h 256 -a plateau -tmax 20 -tmin 1 -smin 0 -smax 255
 
 <table><tr>
 <th></th>
-<th>原图</th>
 <th>泊松噪声</th>
 <th>高斯滤波</th>
 </tr><tr>
 <th>PSNR</th>
-<td>NA</td>
 <td>26.96</td>
 <td>24.42</td>
 </tr><tr>
 <th>SSIM</th>
-<td>1.0</td>
 <td>0.6587</td>
 <td>0.7306</td>
 </tr><tr>
 <th>结果</th>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/lenna.png"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/poisson/poisson_lenna.png"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/poisson/gaussian_poisson_lenna.png"/></td>
 </tr></table>
@@ -230,22 +226,18 @@ python IsingModel.py -w 256 -h 256 -a plateau -tmax 20 -tmin 1 -smin 0 -smax 255
 
 <table><tr>
 <th></th>
-<th>原图</th>
 <th>椒盐噪声</th>
 <th>中值滤波-5</th>
 </tr><tr>
 <th>PSNR</th>
-<td>NA</td>
 <td>14.04</td>
 <td>26.48</td>
 </tr><tr>
 <th>SSIM</th>
-<td>1.0</td>
 <td>0.2012</td>
 <td>0.8276</td>
 </tr><tr>
 <th>结果</th>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/lenna.png"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/salt_pepper/salt_pepper_lenna.png"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/lenna/salt_pepper/median5_salt_pepper_lenna.png"/></td>
 </tr></table>
