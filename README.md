@@ -69,8 +69,6 @@ python IsingModel.py -w 28 -h 28 -tmax 20 -tmin 1 -smin 0 -smax 1 -jj j-coupling
 python IsingModel.py -w 200 -h 100 -tmax 20 -tmin 1 -smin 0 -smax 1 -jj j-coupling/word_SEMI.txt -e 50_000_000
 ```
 
-随着图像尺寸的增大，待求解问题的状态空间也不断增大（例如 200x100 的二值图像具有 200x100x2=4w 种不同的状态），此时需要相应地增大采样次数（例如设置 -e 50_000_000）来提高收敛的概率。值得注意的是每次仿真并不保证能求解得到正确的答案，这往往取决于退火算法的设计与迭代次数的设置，目标是避免落入局部最小值，尽量减小系统的最终能量。
-
 <table><tr>
 <td>J-Couplings</td><td>OK</td><td>Fail</td>
 </tr><tr>
@@ -78,6 +76,8 @@ python IsingModel.py -w 200 -h 100 -tmax 20 -tmin 1 -smin 0 -smax 1 -jj j-coupli
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/ok_word_SEMI.gif"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/fail_word_SEMI.gif"/></td>
 </tr></table>
+
+随着图像尺寸的增大，待求解问题的状态空间也不断增大（例如 200x100 的二值图像具有 200x100x2=4w 种不同的状态），此时需要相应地增大采样次数（例如设置 -e 50_000_000）来提高收敛的概率。值得注意的是每次仿真并不保证能求解得到正确的答案，这往往取决于退火算法的设计与迭代次数的设置，目标是避免落入局部最小值，尽量减小系统的最终能量。
 
 ### 二值图降噪
 
@@ -142,7 +142,7 @@ python IsingModel.py -w 64 -h 64 -a exp -tmax 20 -tmin 1 -smin 0 -smax 1 -js c -
 
 该过程的能量变化如下：
 
-<img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/tv_energy.gif" width=50%/>
+<img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/tv_energy.png" width=50%/>
 
 #### 测试 maze128
 
