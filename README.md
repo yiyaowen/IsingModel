@@ -38,13 +38,13 @@ python IsingModel.py
 
 <img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/hello_world.gif" width=50%/>
 
-伊辛模型中仅存在两种自旋状态，你也可以通过设置 `-smin` 和 `-smax` 来指定自旋态的离散空间。例如通过如下命令来求解一个具有 256 个自旋态的 Potts 模型的随机初态系统，从而生成灰度图。
+伊辛模型中仅存在两种自旋状态，你也可以通过设置 `-smin` 和 `-smax` 来指定自旋态的离散空间。例如通过如下命令来求解经典伊辛模型的随机初态系统，从而生成二值图。
 
 ```bat
-python IsingModel.py -tmin 0 -tmax 255
+python IsingModel.py -tmin 0 -tmax 1
 ```
 
-<img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/multi_spin.gif" width=50%/>
+<img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/binary_spin.gif" width=50%/>
 
 ### Max-Cut 问题
 
