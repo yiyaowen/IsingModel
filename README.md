@@ -4,8 +4,8 @@
 
 基于伊辛模型的 SRAM-CIM 退火芯片算法。
 
-[!NOTE]
-这是一个 **MultiSpin** 实现（多自旋态的 Potts 模型）。对于经典伊辛模型的实现，请参考分支 [**BinarySpin**](https://github.com/yiyaowen/IsingModel/tree/BinarySpin)。
+> [!NOTE]
+> 这是一个 **MultiSpin** 实现（多自旋态的 Potts 模型）。对于经典伊辛模型的实现，请参考分支 [**BinarySpin**](https://github.com/yiyaowen/IsingModel/tree/BinarySpin)。
 
 ## 环境配置
 
@@ -25,8 +25,8 @@ pip install requirements.txt
 
 与量子计算机不同，通用计算机上的 CPU/GPU 以及专用芯片上的 CMOS 电路本质上还是通过模拟退火的方式来求解伊辛模型。模拟退火的过程可以使用蒙特卡洛采样来实现，例如常用的 Metropolis 和 Gibbs 等采样方法。本项目使用 CPU + Metropolis 来求解伊辛模型，相关的算法也可以进一步映射到专用的 CMOS 退火芯片上并使用 SRAM-CIM 等技术来加速求解。
 
-[!IMPORTANT]
-这里不再详细介绍伊辛模型的具体原理，因此在继续阅读之前，请先确保你对伊辛模型有一些基本的了解。
+> [!IMPORTANT]
+> 这里不再详细介绍伊辛模型的具体原理，因此在继续阅读之前，请先确保你对伊辛模型有一些基本的了解。
 
 ### Hello World
 
