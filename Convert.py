@@ -7,14 +7,10 @@ import click
     "source",
     type=click.Path(exists=True)
     )
-@click.argument(
-    "target",
-    type=click.Path()
-    )
 @click.option(
     "--problem", "-p",
     default=None,
-    type=click.Choice(["Denoise", "Generate"]),
+    type=click.Choice(["Generate", "Denoise"]),
     help="Select a NP problem as the source"
     )
 @click.option(
@@ -23,14 +19,20 @@ import click
     type=click.Choice(["nearest", "king"]),
     help="Graph type (topology) of the spins"
     )
+@click.option(
+    "--color-type", "-c",
+    default="grayscale",
+    type=click.Choice(["monochrome", "grayscale"]),
+    help="Color type (space) of the spins"
+    )
 def main(
-    source, target, problem, graph_type
+    source, problem, graph_type, color_type
     ):
     match problem:
-        case "Denoise":
-            Denoise.convert(source, target)
         case "Generate":
-            Generate.convert(source, target, graph_type)
+            Generate.convert(source, graph_type)
+        case "Denoise":
+            Denoise.convert(source, color_type)
         case _:
             raise ValueError("Invalid Problem")
 

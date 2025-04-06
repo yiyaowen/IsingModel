@@ -5,27 +5,34 @@ import numpy as np
 from NPProblem.Coordinate import Coordinate
 
 
-def convert(image_path, output_txt):
+def convert(image_path, color_type):
     """
-    Convert a monochrome image to a Spin/JH-coupling system.
+    Convert a grayscale image to a Spin/JH-coupling system.
     """
-    output_txt = path.abspath(output_txt)
+    output_path = path.abspath(image_path)
 
-    f_dirname = path.dirname(output_txt)
-    f_basename = path.basename(output_txt)
+    output_dir = path.dirname(output_path)
+    output_name = path.basename(output_path)
+    output_name = path.splitext(output_name)[0]
 
     img = Image.open(image_path)
-    img = img.convert("1")
+    match color_type:
+        case "monochrome":
+            img = img.convert("1")
+        case "grayscale":
+            img = img.convert("L")
+        case _:
+            raise ValueError("Invalid Color Type")
 
-    h_system = (np.array(img) * 2) - 1
+    h_system = np.array(img, dtype=int)
 
-    h_output_txt = f"{f_dirname}/h_{f_basename}"
-    np.savetxt(f"{h_output_txt}", h_system, fmt="%+d")
+    h_output_txt = f"{output_dir}/h_{output_name}.txt"
+    np.savetxt(f"{h_output_txt}", h_system, fmt="%+4d")
 
     cd = Coordinate(*img.size)
 
-    j_system = np.full(cd.full_size, +1, dtype=np.int8)
+    j_system = np.full(cd.full_size, +1, dtype=int)
     j_system[::2, ::2] = h_system
 
-    j_output_txt = f"{f_dirname}/j_{f_basename}"
-    np.savetxt(j_output_txt, j_system, fmt="%+d")
+    j_output_txt = f"{output_dir}/j_{output_name}.txt"
+    np.savetxt(j_output_txt, j_system, fmt="%+4d")

@@ -2,6 +2,8 @@ click
 ffmpeg
 matplotlib
 numpy
+opencv-python
 pillow
+scikit-image
 termcolor
 tqdm
