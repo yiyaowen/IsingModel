@@ -363,7 +363,7 @@ def run(
                 if e_f <= e or np.random.rand() <= np.exp(-e_f / T):
                     r, c = cd
                     lattice.spins[r, c] = f
-                    e_delta = 2 * (ej_f + eh_f) - (ej + eh)
+                    e_delta = 2 * (e_f - e)
                     init_energy += e_delta * lattice.energy_norm
 
             ########################################
