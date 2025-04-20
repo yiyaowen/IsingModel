@@ -281,10 +281,10 @@ python IsingModel.py -w 128 -h 128 -a exp -tmax 20 -tmin 1 -smin 0 -smax 255 -js
 <th>原始图像</th>
 <th>处理结果</th>
 </tr><tr>
-<td width=25%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/spad/ising/grayscale/16_anim.gif"/></td>
-<td width=25%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/spad/ising/grayscale/16_energy.png"/></td>
+<td width=25%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/spad/results/grayscale/16_anim.gif"/></td>
+<td width=25%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/spad/results/grayscale/16_energy.png"/></td>
 <td width=25%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/spad/noise/normalize/16.png"/></td>
-<td width=25%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/spad/ising/grayscale/16_spins.png"/></td>
+<td width=25%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/spad/results/grayscale/16_spins.png"/></td>
 </tr></table>
 
 #### 蓄水池编码（累积 3 帧 & 阈值 >= 2）
@@ -299,10 +299,10 @@ python IsingModel.py -w 128 -h 128 -a exp -tmax 20 -tmin 1 -smin 0 -smax 1 -js c
 <th>原始图像</th>
 <th>处理结果</th>
 </tr><tr>
-<td width=25%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/spad/ising/reservoir/n3t2_anim.gif"/></td>
-<td width=25%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/spad/ising/reservoir/n3t2_energy.png"/></td>
+<td width=25%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/spad/results/reservoir/n3t2_anim.gif"/></td>
+<td width=25%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/spad/results/reservoir/n3t2_energy.png"/></td>
 <td width=25%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/spad/noise/n3t2.png"/></td>
-<td width=25%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/spad/ising/reservoir/n3t2_spins.png"/></td>
+<td width=25%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/spad/results/reservoir/n3t2_spins.png"/></td>
 </tr></table>
 
 ## 参数列表
