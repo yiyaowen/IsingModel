@@ -267,6 +267,44 @@ python IsingModel.py -w 256 -h 256 -a plateau -tmax 20 -tmin 1 -smin 0 -smax 255
 
 注意到伊辛模型和中值滤波-3的结果中仍然存在一定的黑白色块。我们故意应用了较大的椒盐噪声（概率=0.07）来展示这种情况，此时中值滤波-5能够将这些色块全部处理干净，但代价是图像变得更加模糊了，这是为什么它的 PSNR 和 SSIM 较低的原因。此外伊辛模型相对于中值滤波-3的另一个优势在于，模拟退火的求解过程中存在温度控制的翻转概率等随机变量，因此某些测试中伊辛模型也能够将黑白色块全部去除，从而得到更好的结果，这意味着伊辛模型在普遍意义上表现更好。
 
+### 真实 SPAD 图像
+
+#### 直接归一化（累积 16 帧灰度图）
+
+```bat
+python IsingModel.py -w 128 -h 128 -a exp -tmax 20 -tmin 1 -smin 0 -smax 255 -js c -jj tv-denoise\spad\system\normalize\j_16.txt -hl 4 -hh tv-denoise\spad\system\normalize\h_16.txt -e 10_000_000
+```
+
+<table><tr>
+<th>退火过程</th>
+<th>能量变化</th>
+<th>原始图像</th>
+<th>处理结果</th>
+</tr><tr>
+<td width=25%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/spad/ising/grayscale/16_anim.gif"/></td>
+<td width=25%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/spad/ising/grayscale/16_energy.png"/></td>
+<td width=25%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/spad/noise/normalize/16.png"/></td>
+<td width=25%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/spad/ising/grayscale/16_spins.png"/></td>
+</tr></table>
+
+#### 蓄水池编码（累积 3 帧 & 阈值 >= 2）
+
+```bat
+python IsingModel.py -w 128 -h 128 -a exp -tmax 20 -tmin 1 -smin 0 -smax 1 -js c -jj tv-denoise\spad\system\j_n3t2.txt -hl 6 -hh tv-denoise\spad\system\h_n3t2.txt -e 1_000_000
+```
+
+<table><tr>
+<th>退火过程</th>
+<th>能量变化</th>
+<th>原始图像</th>
+<th>处理结果</th>
+</tr><tr>
+<td width=25%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/spad/ising/reservoir/n3t2_anim.gif"/></td>
+<td width=25%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/spad/ising/reservoir/n3t2_energy.png"/></td>
+<td width=25%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/spad/noise/n3t2.png"/></td>
+<td width=25%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/spad/ising/reservoir/n3t2_spins.png"/></td>
+</tr></table>
+
 ## 参数列表
 
 ```bat
