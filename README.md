@@ -1,4 +1,4 @@
-# IsingModel
+# Ising Model
 
 Ising model simulated with Python 3.
 
