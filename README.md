@@ -100,6 +100,16 @@ python IsingModel.py -w 64 -h 64 -a exp -tmax 20 -tmin 1 -smin 0 -smax 1 -js c -
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/tv_word_ABC.gif"/></td>
 </tr></table>
 
+与中值滤波的对比如下：
+
+<table><tr>
+<td>伊辛模型</td><td>中值滤波-3</td><td>中值滤波-5</td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/example/tv_word_ABC.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/example/median3_ABC.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/example/median5_ABC.png"/></td>
+</tr><tr>
+</tr></table>
+
 #### 测试数字集
 
 ```bat
@@ -149,12 +159,65 @@ python IsingModel.py -w 64 -h 64 -a exp -tmax 20 -tmin 1 -smin 0 -smax 1 -js c -
 
 <img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/tv_energy.png" width=50%/>
 
+与中值滤波的对比如下：
+
+<table><tr>
+<td>伊辛模型</td><td>中值滤波-3</td><td>中值滤波-5</td>
+<td>伊辛模型</td><td>中值滤波-3</td><td>中值滤波-5</td>
+</tr><tr>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_0.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_0.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_0.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_1.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_1.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_1.png"/></td>
+</tr><tr>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_2.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_2.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_2.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_3.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_3.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_3.png"/></td>
+</tr><tr>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_4.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_4.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_4.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_5.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_5.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_5.png"/></td>
+</tr><tr>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_6.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_6.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_6.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_7.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_7.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_7.png"/></td>
+</tr><tr>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_8.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_8.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_8.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_9.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_9.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_9.png"/></td>
+</tr></table>
+
+
 #### 测试 maze128
 
 <table><tr>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/maze128/maze128.png"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/tv-denoise/maze128/noise_maze128.png"/></td>
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/tv_maze128.gif"/></td>
+</tr></table>
+
+与中值滤波的对比如下：
+
+<table><tr>
+<td>伊辛模型</td><td>中值滤波-3</td><td>中值滤波-5</td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/example/tv_maze128.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/example/median3_maze.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/example/median5_maze.png"/></td>
+</tr><tr>
 </tr></table>
 
 ### 灰度图降噪
