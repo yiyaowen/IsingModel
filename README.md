@@ -2,7 +2,7 @@
 
 **[English](README_en.md) | [中文](README.md)**
 
-基于伊辛模型的 SRAM-CIM 退火芯片算法。
+伊辛模型的 Python 3 实现。
 
 > [!NOTE]
 > 这是一个 **MultiSpin** 实现（多自旋态的 Potts 模型）。对于经典伊辛模型的实现，请参考分支 [**BinarySpin**](https://github.com/yiyaowen/IsingModel/tree/BinarySpin)。
