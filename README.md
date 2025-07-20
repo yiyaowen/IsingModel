@@ -104,11 +104,14 @@ python IsingModel.py -w 64 -h 64 -a exp -tmax 20 -tmin 1 -smin 0 -smax 1 -js c -
 
 <table><tr>
 <td>伊辛模型</td><td>中值滤波-3</td><td>中值滤波-5</td>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/example/tv_word_ABC.png"/></td>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/example/median3_ABC.png"/></td>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/example/median5_ABC.png"/></td>
 </tr><tr>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/tv_word_ABC.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/median3_ABC.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/median5_ABC.png"/></td>
 </tr></table>
+
+> [!NOTE]
+> 中值滤波-3很难去除全部白点，中值滤波-5则会导致过度膨胀；伊辛模型实现了两者之间的黄金平衡。
 
 #### 测试数字集
 
@@ -201,6 +204,8 @@ python IsingModel.py -w 64 -h 64 -a exp -tmax 20 -tmin 1 -smin 0 -smax 1 -js c -
 <td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_9.png"/></td>
 </tr></table>
 
+> [!NOTE]
+> 中值滤波-3很难去除全部白点，中值滤波-5则会导致过度膨胀；伊辛模型实现了两者之间的黄金平衡。
 
 #### 测试 maze128
 
@@ -214,11 +219,14 @@ python IsingModel.py -w 64 -h 64 -a exp -tmax 20 -tmin 1 -smin 0 -smax 1 -js c -
 
 <table><tr>
 <td>伊辛模型</td><td>中值滤波-3</td><td>中值滤波-5</td>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/example/tv_maze128.png"/></td>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/example/median3_maze.png"/></td>
-<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/example/median5_maze.png"/></td>
 </tr><tr>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/tv_maze128.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/median3_maze.png"/></td>
+<td><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/median5_maze.png"/></td>
 </tr></table>
+
+> [!NOTE]
+> 中值滤波-3很难去除全部白点，中值滤波-5则会导致过度膨胀；伊辛模型实现了两者之间的黄金平衡。
 
 ### 灰度图降噪
 
