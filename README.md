@@ -168,40 +168,40 @@ python IsingModel.py -w 64 -h 64 -a exp -tmax 20 -tmin 1 -smin 0 -smax 1 -js c -
 <td>伊辛模型</td><td>中值滤波-3</td><td>中值滤波-5</td>
 <td>伊辛模型</td><td>中值滤波-3</td><td>中值滤波-5</td>
 </tr><tr>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_0.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_0.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_0.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_1.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_1.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_1.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_0.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_0.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_0.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_1.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_1.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_1.png"/></td>
 </tr><tr>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_2.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_2.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_2.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_3.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_3.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_3.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_2.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_2.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_2.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_3.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_3.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_3.png"/></td>
 </tr><tr>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_4.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_4.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_4.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_5.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_5.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_5.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_4.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_4.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_4.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_5.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_5.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_5.png"/></td>
 </tr><tr>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_6.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_6.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_6.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_7.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_7.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_7.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_6.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_6.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_6.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_7.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_7.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_7.png"/></td>
 </tr><tr>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_8.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_8.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_8.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_9.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_9.png"/></td>
-<td width=15%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_9.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_8.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_8.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_8.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/tv_num_9.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median3_9.png"/></td>
+<td width=20%><img src="https://media.githubusercontent.com/media/yiyaowen/IsingModel/refs/heads/main/examples/denoise_numbers/median5_9.png"/></td>
 </tr></table>
 
 > [!NOTE]
