@@ -2,7 +2,7 @@
 
 **[English](README_en.md) | [中文](README.md)**
 
-SRAM-CIM annealing chip algorithm based on the Ising model.
+Ising model simulated with Python 3.
 
 > [!NOTE]
 > This is a **MultiSpin** implementation (Potts model with multiple spin states). For the classical Ising model implementation, please refer to the [**BinarySpin**](https://github.com/yiyaowen/IsingModel/tree/BinarySpin) branch.
