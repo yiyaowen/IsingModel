@@ -1,6 +1,6 @@
 # IsingModel
 
-Algorithms for Ising Model based SRAM-CIM Annealing Chip.
+Ising model simulated with Python 3.
 
 ## Env Setup
 
